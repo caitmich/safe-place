@@ -24,13 +24,13 @@
     client_id: 'RqpmvXevfFAVyRgroD5PTaYaDdCXcc8O',
     client_secret: 'JWslQPW4z2G8yEte') %>
 
-<%= form_with do |form| %>
-  <%= form.text_area :latitude %>
-  <%= form.text_area :longitude %>
-  <%= form.submit %>
+<%= form_with url: "/results", method: :get do |form| %>
+  <%= form.label "enter lat and long" %>
+  <%= form.text_field :latitude %>
+  <%= form.text_field :longitude %>
+  <%= form.submit "search"%>
 <% end %>
 
-<% safety = amadeus.safety.safety_rated_locations.get(latitude: 41.397158, longitude: 2.160873).data %>
 
 <% safety.each do |s|  %>
   <h5> <%= s["subType"] %> </h5
