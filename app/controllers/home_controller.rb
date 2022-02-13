@@ -4,11 +4,17 @@ class HomeController < ApplicationController
     @latitude = params[:latitude]
     @longitude = params[:longitude]
 
-    @results = amadeus.safety.safety_rated_locations.get(latitude: @latitude, longitude: @longitude).data
+
   end
 
-  def show
+  end
 
+  def results
+    @latitude = params[:latitude]
+    @longitude = params[:longitude]
+
+  respond_to do |format|
+    format.html { redirect_to results_path }
   end
 
 end

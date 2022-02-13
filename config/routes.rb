@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :home
+  
+  get '/results', to: 'home#results', as: 'results'
 end

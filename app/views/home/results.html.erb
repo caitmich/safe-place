@@ -1,0 +1,18 @@
+<% require 'amadeus' %>
+<!-- amadeus -->
+<% amadeus = Amadeus::Client.new(
+    client_id: 'RqpmvXevfFAVyRgroD5PTaYaDdCXcc8O',
+    client_secret: 'JWslQPW4z2G8yEte') %>
+
+<% safety = amadeus.safety.safety_rated_locations.get(latitude: 41.397158, longitude: 2.160873).data %>
+
+<div>
+<% safety.each do |s|  %>
+<div class=>
+  <h5> <%= s["subType"] %> </h5
+  <h5> <%= s["name"] %> </h5>
+  <h5> <%= s["geoCode"] %> </h5>
+  <h5> <%= s["safetyScores"] %> </h5>
+</div>
+<% end %>
+</div>
