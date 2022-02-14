@@ -18,19 +18,27 @@
     </div>
   </nav>
 
+<div class="row mx-5 mt-3">
+  <p>Please enter the <strong>latitude</strong> and <strong>longitude</strong> of your desired destination. <br>
+    If you need some <em>inspiration</em>, click on one of the cities below to view their safety ratings</p>
+</div>
 <div class="row">
-<div class="col-3">
+<div class="col-2">
+
 </div>
 <div class="mt-5 text-center w-50 d-flex align-items-center col-3">
-  <%= bootstrap_form_with url: "/", method: :post do |form| %>
-  <div class="mb-3">
-    <%= form.label "Please enter latitude and longitude:" %>
-  </div>
+
+  <%= bootstrap_form_with url: "/", method: :get do |form| %>
     <%= form.text_field :latitude %>
     <%= form.text_field :longitude %>
     <%= form.submit "Search"%>
   <% end %>
+
 </div>
-<div class="col-3">
-</div>
+
+<div class="mx-5 mt-3">
+  <div>
+    <h5>Barcelona</h5>
+    <a href="/results"> View Safety Values</a>
+  </div>
 </div>

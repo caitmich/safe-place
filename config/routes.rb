@@ -3,10 +3,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "home#index"
+  root "users#index"
 
   resources :users
   resources :home
-  
+
   get '/results', to: 'home#results', as: 'results'
+  get '/search', to: 'home#search', as: 'search'
+
 end
