@@ -1,8 +1,8 @@
 <% require 'amadeus' %>
 <!-- amadeus -->
 <% amadeus = Amadeus::Client.new(
-    client_id: 'RqpmvXevfFAVyRgroD5PTaYaDdCXcc8O',
-    client_secret: 'JWslQPW4z2G8yEte') %>
+    client_id: ENV['ID'],
+    client_secret: ENV['SECRET']) %>
 
 <% safety = amadeus.safety.safety_rated_locations.get(latitude: 41.397158, longitude: 2.160873).data %>
 
