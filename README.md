@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails application that makes use of the Safe Place API by Amadeus.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A WIP that will enable users to view safety ratings of various locations including the ability to filter by criteria such as:
+- LGBTQ+ safety
+- Safety for women
+- Overall safety
+- etc.
